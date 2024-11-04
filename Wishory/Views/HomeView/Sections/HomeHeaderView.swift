@@ -9,9 +9,9 @@ import SwiftUI
 
 struct HomeHeaderView: View {
     @Binding var options: [HomeOptionVM]
-
+    
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             HStack {
                 VStack(alignment: .leading) {
                     Text("Wishory")
@@ -24,12 +24,12 @@ struct HomeHeaderView: View {
                 .padding([.leading, .top])
                 Spacer()
                 ZStack {
-                    Color(.white)
+                    Color(.clear)
                         .frame(width: 60, height: 100)
                         .overlay(
-                                RoundedRectangle(cornerRadius: 30)
-                                    .stroke(Color.lightGray, lineWidth: 1)
-                            )
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color.lightGray, lineWidth: 1)
+                        )
                     Image(systemName: "magnifyingglass")
                         .resizable()
                         .frame(width: 30, height: 30)
@@ -45,7 +45,7 @@ struct HomeHeaderView: View {
                     ForEach(options) { option in
                         Text(option.title)
                             .padding()
-                            .background(Color.lightGray)
+                            .background(Color.backGroundLightGray)
                             .foregroundStyle(Color.darkGreen)
                             .fontWeight(.medium)
                             .cornerRadius(20)
@@ -55,7 +55,6 @@ struct HomeHeaderView: View {
             }
             .frame(height: 100)
             Spacer()
-            
         }
     }
 }

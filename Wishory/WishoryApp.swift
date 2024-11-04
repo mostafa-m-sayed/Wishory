@@ -9,9 +9,23 @@ import SwiftUI
 
 @main
 struct WishoryApp: App {
+    @StateObject private var appRootManager = AppRootManager()
+
     var body: some Scene {
         WindowGroup {
-            IntroView()
+            Group {
+                switch appRootManager.currentRoot {
+                case .splash:
+                    SplashView()
+                case .intro:
+                    IntroView()
+                case .authentication:
+                    IntroView()
+                case .mainTab:
+                    TabBarView()
+                }
+            }
+            .environmentObject(appRootManager)
         }
     }
 }
