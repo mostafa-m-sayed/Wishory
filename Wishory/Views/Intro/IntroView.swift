@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IntroView: View {
+    @EnvironmentObject private var appRootManager: AppRootManager
+
     @State private var activeCard: IntroCard?
 
     private let screenHeight = UIScreen.main.bounds.height
@@ -64,7 +66,7 @@ struct IntroView: View {
             Spacer()
             HStack {
                 Button {
-                    
+                    appRootManager.currentRoot = .mainTab
                 } label: {
                     Text("Continue")
                         .frame(maxWidth: .infinity, maxHeight: 50)

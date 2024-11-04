@@ -13,6 +13,9 @@ extension Color {
     static var lightGray: Color {
         Color(hex: "#D3D3D3")
     }
+    static var backGroundLightGray: Color {
+        Color(hex: "#F8F8F8")
+    }
     
 }
 

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		06C3774C2CD7A19300FDE2A0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 06C3774B2CD7A19300FDE2A0 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		063E17582CCFCA66003A6DF8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,22 @@
 		063E17612CCFCA66003A6DF8 /* WishoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WishoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		06C376DB2CD7961700FDE2A0 /* Exceptions for "Wishory" folder in "Compile Sources" phase from "Wishory" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 063E17422CCFCA65003A6DF8 /* Sources */;
+			membershipExceptions = (
+				Resources/MockData/ProductsMock.json,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		063E17482CCFCA65003A6DF8 /* Wishory */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				06C376DB2CD7961700FDE2A0 /* Exceptions for "Wishory" folder in "Compile Sources" phase from "Wishory" target */,
+			);
 			path = Wishory;
 			sourceTree = "<group>";
 		};
@@ -52,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C3774C2CD7A19300FDE2A0 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +130,7 @@
 			);
 			name = Wishory;
 			packageProductDependencies = (
+				06C3774B2CD7A19300FDE2A0 /* Kingfisher */,
 			);
 			productName = Wishory;
 			productReference = 063E17462CCFCA65003A6DF8 /* Wishory.app */;
@@ -195,6 +214,9 @@
 			);
 			mainGroup = 063E173D2CCFCA65003A6DF8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				06C376EB2CD7A09900FDE2A0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 063E17472CCFCA65003A6DF8 /* Products */;
 			projectDirPath = "";
@@ -591,6 +613,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		06C376EB2CD7A09900FDE2A0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06C3774B2CD7A19300FDE2A0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06C376EB2CD7A09900FDE2A0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 063E173E2CCFCA65003A6DF8 /* Project object */;
 }
