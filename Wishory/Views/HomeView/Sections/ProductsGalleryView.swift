@@ -18,7 +18,7 @@ struct ProductsGalleryView: View {
             HStack {
                 Text("Popular Products")
                     .font(.title)
-                    .foregroundStyle(Color.darkGreen)
+                    .foregroundStyle(Constants.AppColors.theme)
                 Spacer()
                 Text("See All >")
                     .font(.footnote)

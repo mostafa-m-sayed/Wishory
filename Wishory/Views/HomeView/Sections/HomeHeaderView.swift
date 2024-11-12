@@ -12,33 +12,7 @@ struct HomeHeaderView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Wishory")
-                        .font(.system(size: 30, weight: .black))
-                        .foregroundStyle(Color.darkGreen)
-                    Text("Explore the world")
-                        .font(.system(size: 30, weight: .black))
-                }
-                .foregroundStyle(Color.darkGreen)
-                .padding([.leading, .top])
-                Spacer()
-                ZStack {
-                    Color(.clear)
-                        .frame(width: 60, height: 100)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color.lightGray, lineWidth: 1)
-                        )
-                    Image(systemName: "magnifyingglass")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                        .foregroundStyle(Color.darkGreen)
-                        .fontWeight(.bold)
-                    
-                }
-                .padding([.trailing, .top])
-            }
+            HeaderView()
             
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 20) {
@@ -46,7 +20,7 @@ struct HomeHeaderView: View {
                         Text(option.title)
                             .padding()
                             .background(Color.backGroundLightGray)
-                            .foregroundStyle(Color.darkGreen)
+                            .foregroundStyle(Constants.AppColors.theme)
                             .fontWeight(.medium)
                             .cornerRadius(20)
                     }
