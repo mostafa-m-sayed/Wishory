@@ -32,10 +32,10 @@ struct ProductCardView: View {
             HStack {
                 Text("$\(product.price, specifier: "%.2f")")
                     .font(.headline)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Constants.AppColors.theme)
                 Spacer()
                 ZStack {
-                    Color.blue
+                    Constants.AppColors.theme
                         .frame(width: 25, height: 25)
                         .cornerRadius(5)
                     Image(systemName: "plus")
