@@ -33,11 +33,22 @@
 		063E17612CCFCA66003A6DF8 /* WishoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WishoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		069937902CF2022500E84011 /* Exceptions for "Wishory" folder in "Wishory" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/MockData/CartsMock.json,
+			);
+			target = 063E17452CCFCA65003A6DF8 /* Wishory */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 		06C376DB2CD7961700FDE2A0 /* Exceptions for "Wishory" folder in "Compile Sources" phase from "Wishory" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = 063E17422CCFCA65003A6DF8 /* Sources */;
 			membershipExceptions = (
+				Resources/MockData/CartsMock.json,
 				Resources/MockData/ProductsMock.json,
 			);
 		};
@@ -47,6 +58,7 @@
 		063E17482CCFCA65003A6DF8 /* Wishory */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				069937902CF2022500E84011 /* Exceptions for "Wishory" folder in "Wishory" target */,
 				06C376DB2CD7961700FDE2A0 /* Exceptions for "Wishory" folder in "Compile Sources" phase from "Wishory" target */,
 			);
 			path = Wishory;

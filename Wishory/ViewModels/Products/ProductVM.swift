@@ -25,12 +25,6 @@ class ProductVM: ObservableObject, Identifiable {
     var category: String {
         product.category// ?? ""
     }
-//    var price: String {
-//        if let price = product.price {
-//            return "$" + String(price)
-//        }
-//        return "$"
-//    }
     var price: Double {
         product.price// ?? 0
     }

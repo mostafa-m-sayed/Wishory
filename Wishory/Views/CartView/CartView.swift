@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CartView: View {
-    @ObservedObject var productsVM: ProductsVM = ProductsVM(service: Constants.mocking ? {ProductServiceMock()}() : ProductService())
-
+    @ObservedObject var cartVM: CartVM = CartVM(service: Constants.mocking ? {CartServiceMock()}() : CartService())
+    @State var products: [ProductVM]?
     var body: some View {
         VStack(spacing: 0) {
             Color(.systemGroupedBackground)
@@ -38,7 +38,8 @@ struct CartView: View {
         .ignoresSafeArea(edges: [.top])
         .background(Constants.AppColors.theme)
         .task {
-            await productsVM.getProducts()
+            await cartVM.getUserCart()
+            
         }
     }
 }

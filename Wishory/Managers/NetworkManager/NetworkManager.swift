@@ -36,9 +36,9 @@ actor NetworkManager: NetworkManagerProtocol {
     static var baseURL: String {
         switch environment {
         case .development:
-            return "https://staging-api.findsquare.co/api/v1"
+            return "'https://fakestoreapi.com"
         case .production:
-            return "https://api.findsquare.co/api/v1"
+            return "'https://fakestoreapi.com"
         }
     }
 

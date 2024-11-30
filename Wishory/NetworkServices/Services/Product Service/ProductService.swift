@@ -9,6 +9,4 @@ class ProductService: ProductServiceProtocol {
     func getProducts() async throws -> APIResponse<[Product]> {
         throw NetworkManager.NetworkError.invalidURL
     }
-    
-    
 }
